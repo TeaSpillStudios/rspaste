@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-sudo cp -f ./rspaste /usr/bin
-sudo chmod +x /usr/bin/rspaste
+sudo cp -f ./rspaste /usr/bin || doas cp -f ./rspaste /usr/bin
+sudo chmod +x /usr/bin/rspaste || doas chmod +x /usr/bin/rspaste
