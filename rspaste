@@ -3,6 +3,5 @@ read -p "This prompt is unsupported. For text input use the pipe character (|) e
 if [[ $pipe == "" ]]; then
   echo "Please enter something!"
   exit
-else
-  curl --data-binary @- https://paste.rs
 fi
+curl --data-binary @- https://paste.rs
