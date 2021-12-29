@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-read -p "This prompt is unsupported. For text input use the pipe character (|) e.g \"echo \"This is a demo | rspaste\". Press Ctrl+C to exit\"" pipe
+read -p "Text to upload: " pipe
 if [[ $pipe == "" ]]; then
   echo "Please enter something!"
   exit
 fi
-curl --data-binary @- https://paste.rs
+echo $pipe |& curl --data-binary @- https://paste.rs
